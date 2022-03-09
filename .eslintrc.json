@@ -25,7 +25,7 @@
         "react/react-in-jsx-scope": "off",
         "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
         "react/jsx-filename-extension": [0, { "extensions": [".js", ".jsx"] }],
-        "react/jsx-props-no-spreading": "warn",
+        "react/jsx-props-no-spreading": "off",
         "linebreak-style": ["error", "windows"],
         "no-unused-vars": "warn",
         "import/no-extraneous-dependencies": "off"
