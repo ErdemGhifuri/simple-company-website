@@ -1,19 +1,21 @@
 /** @type {import('next').NextConfig} */
-const ESLintPlugin = require('eslint-webpack-plugin');
+const path = require("path");
+const ESLintPlugin = require("eslint-webpack-plugin");
 
 module.exports = {
+  sassOptions: {
+    includePaths: [path.join(__dirname, "styles")],
+  },
   future: {
     webpack5: true,
   },
-  webpack: (config, {
-    buildId, dev, isServer, defaultLoaders, webpack,
-  }) => {
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     if (dev) {
       config.plugins.push(
         new ESLintPlugin({
-          extensions: ['ts', 'tsx'],
+          extensions: ["ts", "tsx"],
           failOnError: true,
-        }),
+        })
       );
     }
 

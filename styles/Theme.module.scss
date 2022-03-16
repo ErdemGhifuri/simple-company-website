@@ -1,0 +1,27 @@
+$primary: #040C1C;
+$secondary: #FCAC3C;
+$background-color: #fff;
+
+.navigation {
+  background-color: $background-color;
+  color: $primary;
+
+  .banner {
+    background-color: $primary;
+    color: $background-color;
+
+    a {
+      color: $background-color;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $primary;
+    cursor: pointer;
+  }
+  
+  a:hover {
+    color: $secondary;
+  }
+}
