@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.scss";
 
 // components
 import Navigation from "../components/navigation";
+import Carousel from "../components/carousel";
 
 const Home: NextPage = () => (
   <div>
@@ -15,6 +16,7 @@ const Home: NextPage = () => (
     </Head>
 
     <Navigation />
+    <Carousel />
     <main className={styles.main}>
       <h1 className={styles.title}>
         Welcome to <a href="https://nextjs.org">Next.js!</a>

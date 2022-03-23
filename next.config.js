@@ -3,6 +3,9 @@ const path = require("path");
 const ESLintPlugin = require("eslint-webpack-plugin");
 
 module.exports = {
+  images: {
+    domains: ["source.unsplash.com"],
+  },
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },

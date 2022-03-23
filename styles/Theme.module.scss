@@ -25,3 +25,47 @@ $background-color: #fff;
     color: $secondary;
   }
 }
+
+.subtitle1 {
+  margin: 5px;
+  color: $secondary;
+}
+
+.btn1 {
+  margin: 5px;
+  background-color: $primary;
+  color: $background-color;
+}
+.btn1:hover {
+  background-color: $background-color;
+  color: $primary;
+}
+
+.btn2 {
+  margin: 5px;
+  background-color: $secondary;
+  color: $background-color;
+}
+.btn2:hover {
+  background-color: $background-color;
+  color: $secondary;
+}
+
+.fadeIn {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    transform: translate3d(0,40px,0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0,0px,0);
+    opacity: 1;
+  }
+}
