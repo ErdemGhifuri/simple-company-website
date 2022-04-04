@@ -15,9 +15,7 @@ import { ContentCaptions } from "./ContentCaptions";
 // animated component dynamic import
 const Animate: any = dynamic(
   (): any => import("react-animated-css").then((mod) => mod.Animated),
-  {
-    ssr: false,
-  }
+  { ssr: false }
 );
 
 const Carousel: NextPage = () => {
