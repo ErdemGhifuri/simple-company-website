@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 
 // components
 import Image from "next/image";
+import Link from "next/link";
 
 import { AppBar, Toolbar, Typography, Container } from "@mui/material";
 
@@ -16,7 +17,12 @@ import logo from "../../public/images/logo.png";
 import theme from "../../styles/Theme.module.scss";
 
 // menu
-const pages = ["Home", "Shop", "Page", "Blog", "Contact"];
+const pages = [
+  { text: "Home", url: "#" },
+  { text: "About", url: "#" },
+  { text: "Service", url: "#" },
+  { text: "Contact", url: "#" },
+];
 
 const Navigation: NextPage = () => (
   <AppBar className={theme.navigation} position="static">
@@ -34,14 +40,16 @@ const Navigation: NextPage = () => (
             className="p-4"
           >
             <div className="grid grid-cols-2 gap-2 items-center justify-center">
-              <div className="justify-self-end" style={{ width: "70%" }}>
-                <Image src={logo} sizes="10px" alt="logo" />
-              </div>
+              <Link href="/" passHref>
+                <div className="justify-self-end" style={{ width: "50px" }}>
+                  <Image src={logo} alt="logo" />
+                </div>
+              </Link>
               <span
                 className="py-0 my-0"
                 style={{ fontSize: "18pt", fontWeight: "bold" }}
               >
-                Neve
+                Wolfram
               </span>
             </div>
           </Typography>
@@ -56,14 +64,16 @@ const Navigation: NextPage = () => (
             className="p-4"
           >
             <div className="grid grid-cols-2 gap-2 items-center justify-center">
-              <div className="justify-self-end" style={{ width: "70%" }}>
-                <Image src={logo} sizes="10px" alt="logo" />
-              </div>
+              <Link href="/" passHref>
+                <div className="justify-self-end" style={{ width: "50px" }}>
+                  <Image src={logo} alt="logo" />
+                </div>
+              </Link>
               <span
                 className="py-0 my-0"
                 style={{ fontSize: "18pt", fontWeight: "bold" }}
               >
-                Neve
+                Wolfram
               </span>
             </div>
           </Typography>

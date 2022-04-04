@@ -3,12 +3,17 @@ import { useState } from "react";
 import propTypes from "prop-types";
 
 // components
-import Box from "@mui/material/Box";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import {
+  Box,
+  Menu,
+  MenuItem,
+  IconButton,
+  Typography,
+  Link,
+} from "@mui/material";
+
+// icons
 import MenuIcon from "@mui/icons-material/Menu";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 
 const MenuMobile: NextPage<{
   pages: any;
@@ -53,12 +58,18 @@ const MenuMobile: NextPage<{
           display: { xs: "block", md: "none" },
         }}
       >
-        {pages.map((page: string) => (
-          <MenuItem key={page} onClick={handleCloseNavMenu}>
-            <Typography textAlign="center" fontStyle="Helveltica">
-              {page}
-            </Typography>
-          </MenuItem>
+        {pages.map((page: any, index: number) => (
+          <Link
+            key={index}
+            href={page.url}
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <MenuItem key={page} onClick={handleCloseNavMenu}>
+              <Typography textAlign="center" fontStyle="Helveltica">
+                {page.text}
+              </Typography>
+            </MenuItem>
+          </Link>
         ))}
       </Menu>
     </Box>
@@ -66,7 +77,7 @@ const MenuMobile: NextPage<{
 };
 
 MenuMobile.propTypes = {
-  pages: propTypes.arrayOf(propTypes.string),
+  pages: propTypes.arrayOf(propTypes.objectOf(propTypes.string)),
 };
 
 MenuMobile.defaultProps = {
