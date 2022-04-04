@@ -25,7 +25,7 @@ const Carousel: NextPage = () => {
   const [yOffset, setYOffset] = useState(0);
   const [activeSlide, setActiveSlide] = useState(0);
 
-  // handle scroll
+  // handle parallax scroll
   const handleScroll = () => setYOffset(window.scrollY);
 
   // component did mount
