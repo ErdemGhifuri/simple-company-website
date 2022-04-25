@@ -32,3 +32,10 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Credit
+
+- [Node icons created by surang - Flaticon](https://www.flaticon.com/free-icons/node)
+- [Blueprint icons created by smalllikeart - Flaticon](https://www.flaticon.com/free-icons/blueprint)
+- [Office team work photo created by freepik - www.freepik.com](https://www.freepik.com/photos/office-team-work)
+- [Formula icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/formula)

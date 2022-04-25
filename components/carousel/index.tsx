@@ -1,10 +1,11 @@
 import type { NextPage } from "next";
-import dynamic from "next/dynamic";
-import { useState, useEffect } from "react";
+import propTypes from "prop-types";
+import { useState } from "react";
 
 // components
 import Image from "next/image";
 import { Carousel as CarouselSection } from "react-responsive-carousel";
+import Animate from "../Animate";
 
 // styles
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -12,25 +13,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 // captions
 import { ContentCaptions } from "./ContentCaptions";
 
-// animated component dynamic import
-const Animate: any = dynamic(
-  (): any => import("react-animated-css").then((mod) => mod.Animated),
-  { ssr: false }
-);
-
-const Carousel: NextPage = () => {
+const Carousel: NextPage<{ yOffset: any }> = ({ yOffset }) => {
   // state
-  const [yOffset, setYOffset] = useState(0);
   const [activeSlide, setActiveSlide] = useState(0);
-
-  // handle parallax scroll
-  const handleScroll = () => setYOffset(window.scrollY);
-
-  // component did mount
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <div>
@@ -93,6 +78,14 @@ const Carousel: NextPage = () => {
       </CarouselSection>
     </div>
   );
+};
+
+Carousel.propTypes = {
+  yOffset: propTypes.number,
+};
+
+Carousel.defaultProps = {
+  yOffset: 0,
 };
 
 export default Carousel;

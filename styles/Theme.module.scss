@@ -1,6 +1,9 @@
 $primary: #040C1C;
 $secondary: #FCAC3C;
-$background-color: #fff;
+$third-color: #FFE9CC;
+$background-color: aliceblue;
+$filter-primary: invert(5%) sepia(20%) saturate(2749%) hue-rotate(186deg) brightness(98%) contrast(102%);
+$filter-secondary: invert(98%) sepia(71%) saturate(4906%) hue-rotate(320deg) brightness(98%) contrast(103%);
 
 .navigation {
   background-color: $background-color;
@@ -49,4 +52,44 @@ $background-color: #fff;
 .btn2:hover {
   background-color: $background-color;
   color: $secondary;
+}
+
+.about {
+  background-color: $background-color;
+
+  hr {
+    background-color: $secondary;
+    color: $secondary;
+    height: 4px;
+    border-width: 0;
+    width: 100px;
+  }
+}
+
+.service {
+  background-color: $primary;
+  color: $background-color;
+
+  hr {
+    background-color: $secondary;
+    color: $secondary;
+    height: 4px;
+    border-width: 0;
+    width: 100px;
+  }
+
+  img {
+    filter: $filter-primary;
+  }
+}
+
+.contact {
+  background-color: $secondary;
+  color: $primary;
+}
+
+.footer {
+  background-color:  $primary;
+  text-align: center;
+  color: $background-color;
 }

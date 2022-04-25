@@ -19,6 +19,10 @@ a {
   box-sizing: border-box;
 }
 
+.carousel .control-dots {
+  height: 40px;
+}
+
 @font-face {
   font-family: ChristianSunday;
   src: url("./fonts/Christian-Sunday-Italic.otf") format("opentype");
